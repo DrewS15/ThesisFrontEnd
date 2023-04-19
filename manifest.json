@@ -1,0 +1,11 @@
+{
+    "manifest_version":3,
+    "name": "Hate_Speech_Detection Alpha",
+    "description": "Hate Speech Detection Extension",
+    "version": "1.0",
+    "action": {
+        "default_popup": "hello.html",
+        "default_icon": "hello_extensions.png"
+    }
+}    
+    
