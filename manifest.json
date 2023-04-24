@@ -1,12 +1,14 @@
 {
     "manifest_version":3,
-    "name": "Hate_Speech_Detection Alpha",
-    "description": "Hate Speech Detection Extension",
-    "version": "0.2.0",
+    "name": "Hate Speech Detection",
+    "description": "Hate Speech Analysis Extension",
+    "version": "0.3.0",
     "action": {
         "default_popup": "HSD.html",
         "default_icon": "hello_extensions.png"
+    },
+    "content_security_policy" : {
+        "extension_pages" :"script-src 'self'"
     }
-
-}    
+}  
     
