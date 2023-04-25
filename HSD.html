@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pyscript.css" />
+
+  <head>
+    <script defer src="pyscript.js"></script>
+    </head>
   <body>
     <div>
 
@@ -28,8 +33,9 @@
       </form>
 
     </div>
-
+    <py-config src="./pyscript.toml"></py-config>
+    <py-script src="./main.py"></py-script>
     <script type="text/javascript" src="./exFunc.js"></script>
-
   </body>
+
 </html>
