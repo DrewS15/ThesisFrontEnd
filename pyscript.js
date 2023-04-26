@@ -3551,7 +3551,7 @@ var pyscript = (function (exports) {
       type: 'app',
       interpreters: [
           {
-              src: './pyodide.js',
+              src: 'https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js',
               name: 'pyodide-0.22.1',
               lang: 'python',
           },
@@ -3807,7 +3807,7 @@ var pyscript = (function (exports) {
   such as MicroPython.
    */
   class RemoteInterpreter extends Object {
-      constructor(src = './pyodide.js') {
+      constructor(src = 'https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js') {
           super();
           this.src = src;
       }
