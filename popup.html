@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Select Text</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.03.1/pyscript.css" />
+    <script defer src="https://pyscript.net/releases/2023.03.1/pyscript.js"></script>
+    
+  </head>
+  <body>
+    <h2>Filipino Hatespeech Detection</h2>
+    <h3>Selected Text: </h3>
+    <textarea id="text_display"></textarea>
+
+    <button type="button" id="analyze" py-click="on_click()" style="background-color: white">Analyze Text</button>
+    <!-- 1. Download nltk_data that is used in files
+         2. import nltk_data to pyscript local env
+         3. change file download file path for nltk https://www.youtube.com/watch?v=KXqukcsQx8k
+         4. Manage errors  -->
+    <py-config>
+      
+        packages = ["scikit-learn",
+                    "joblib",
+                    "nltk",
+                   ]
+
+        [[fetch]]
+        files = ["./Detector.py",
+                 "./txtpreprocess.py",
+                 "./svm_model_sigmoid.joblib",
+                 "./tfidf_vectorizer_sigmoid.joblib",
+                 "./eng_tag_lemmatizer.py",
+                 "./stopwords_tl.txt",
+                 "./tg_stem.py",
+                ]
+
+    </py-config>
+    
+    <py-script>
+      from pyodide.ffi import create_proxy
+      from Detector import detection                                
+
+      import warnings
+      warnings.filterwarnings("ignore")
+
+      def on_click(*args):                                         
+        myinput = js.document.getElementById("text_display");
+        myoutput = js.document.getElementById("decision_display");
+        myoutput.value = detection(myinput).value;
+
+      button = js.document.getElementById("analyze");
+      button.addEventListener("click", create_proxy(on_click))
+    </py-script>
+
+    <h3>Sentiment Classificaion: </h3>
+    <textarea id="decision_display"></textarea>
+    <!-- <script src="popup.js"></script> -->
+  </body>
+</html>
