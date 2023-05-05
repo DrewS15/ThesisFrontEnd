@@ -3,7 +3,7 @@ chrome.runtime.onInstalled.addListener(() => {
     // when user right clicks on a text, the extension be available in the options
     var contextMenuItem = {
         "id": "ExtensionDemo", 
-        "title": "Filipino Hatespeech Detection",
+        "title": "Filipino Hatespeech Detection3",
         "contexts": ["selection"]
     }
 
@@ -16,11 +16,7 @@ chrome.runtime.onInstalled.addListener(() => {
       var selectedText = info.selectionText
           //store the selected text in local storage
           chrome.storage.local.set({ highlighted_text : selectedText})
-          // chrome.storage.local.get('highlighted_text', function(result){
-          //   selected = result.highlighted_text;
-          //   console.log(selected);
-          //   // document.getElementById('text_display').innerHTML = selected;
-          // });
+
     });
 });
 

@@ -1,6 +1,6 @@
 {
-    "name": "Text to Wikipedia",
-    "description": "Highlight over a word to go to that Wikipedia article",
+    "name": "Filipino Hatespeech Detectionv3",
+    "description": "official filipino hatespeech detection demo",
     "version": "1.0",
     "manifest_version": 3,
     "action": {"default_popup": "popup.html"},
@@ -13,19 +13,11 @@
             "js": ["popup.js"]
         }
     ],
-    "sandbox": {
-        "pages": [
-          "popup.html"
-        ]
-      },
-      "content_security_policy": {
-        "sandbox": "sandbox allow-scripts; script-src 'unsafe-eval' 'self' https://pyscript.net https://cdn.jsdelivr.net"
-      },
-      "permissions":[
-        "contextMenus",
-        "tabs",
-        "storage",
-        "scripting",
-        "activeTab"
+    "permissions":[
+      "contextMenus",
+      "tabs",
+      "storage",
+      "scripting",
+      "activeTab"
     ]
 }
