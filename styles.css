@@ -1,3 +1,7 @@
+body {
+  background: #2C2C2C;
+}
+
 #text_display {
   width: 250px;
   height: 150px;
@@ -11,3 +15,5 @@
   resize: both;
   overflow: auto;
 }
+
+
