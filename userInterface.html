@@ -4,18 +4,36 @@
     <meta charset="UTF-8" />
     <title>Select Text</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="textareaStyle.css">
 
   </head>
   <body>
+    <!-- 
     <h2>Filipino Hatespeech Detection</h2>
     <h3>INPUT TEXT</h3>
-    <textarea id="text_display"></textarea>
+    -->
+    <div class="grid-container">
+      <div class="text grid-child">
+          <span id="title"></span><br>
+          <span id="version" class="version"></span>
+      </div>
+      <div class="text grid-child">
+        Placeholder Area
+      </div>
+    </div>
 
-    <button type="button" id="analyze" style="background-color: white">Analyze Text</button>
-  
-    <h3>Sentiment Classificaion: </h3>
+    <form id="inputForm" method="post" autocomplete="off" >
+      <!--<h3 class="text">Input Text: </h3>-->
+    <textarea id="text_display" rows="5" cols="35" placeholder="Insert Text Here" wrap="hard"></textarea>
+    <div align="center">
+      <button type="button" id="analyze" style="background-color: white">Analyze Text</button>
+    </div>
+    <h3 class="text" style="text-align: center">Sentiment Classification</h3>
     <textarea id="decision_display" rows="5" cols="35" readonly placeholder="Output Goes Here" wrap="hard"></textarea>
+    </form>
+
     <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
     <script src="contextMenu.js"></script>
+    <script src="functions.js"></script>
   </body>
 </html>
