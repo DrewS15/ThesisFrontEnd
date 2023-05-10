@@ -1,6 +1,6 @@
 chrome.storage.local.get('highlighted_text', function(result){
   selected = result.highlighted_text;
-  // console.log(selected);
+  console.log(selected);
   document.getElementById('text_display').innerHTML = selected;
 });
 
@@ -11,7 +11,7 @@ const decisionDisplay = document.getElementById("decision_display");
 analyzeBtn.addEventListener("click", function() {
   // !!!need to change BASE_URL everytime there is a new session
   // !!!get url from val
-  const BASE_URL = 'https://ffc7-124-106-181-212.ngrok-free.app';
+  const BASE_URL = 'https://e178-124-106-181-212.ngrok-free.app/';
   const sentiment = selected;
   const queryParam = `/?input='${sentiment}'`;
 
