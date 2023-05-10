@@ -1,4 +1,4 @@
-#text_display{
+#input_text{
 	width: 250px;
     height: 150px;
     resize: none;
@@ -6,16 +6,16 @@
 	overflow-x: hidden;
 }
 
-#text_display::-webkit-scrollbar-track{
+#input_text::-webkit-scrollbar-track{
 	background-color: rgb(190, 190, 190);
 }
 
-#text_display::-webkit-scrollbar{
+#input_text::-webkit-scrollbar{
 	width: 4px;
 	background-color: #F5F5F5;
 }
 
-#text_display::-webkit-scrollbar-thumb{
+#input_text::-webkit-scrollbar-thumb{
 	background-color: #2C2C2C;
 }
 

@@ -1,3 +1,4 @@
+chrome.storage.local.set({ highlighted_text : null});
 chrome.runtime.onInstalled.addListener(() => {
     // context menu information for chrome extension
     // when user right clicks on a text, the extension be available in the options
@@ -19,5 +20,6 @@ chrome.runtime.onInstalled.addListener(() => {
 
     });
 });
+
 
 
