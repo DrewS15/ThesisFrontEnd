@@ -1,6 +1,5 @@
 chrome.storage.local.set({ highlighted_text : null});
 chrome.runtime.onInstalled.addListener(() => {
-    notifyUser();
     // context menu information for chrome extension
     // when user right clicks on a text, the extension be available in the options
     var contextMenuItem = {
@@ -18,25 +17,21 @@ chrome.runtime.onInstalled.addListener(() => {
         var selectedText = info.selectionText
           //store the selected text in local storage
         chrome.storage.local.set({ highlighted_text : selectedText})
+        // Notify user upon selection
         notifyUser();
-
     });
 });
-
 function notifyUser(){
     console.log("Create Notification");
     chrome.notifications.create(
         {
-            
-            title: 'Filipino Hatespeech Detection',
-            message: 'Selection saved, Open extension',
+            type: 'basic',
             iconUrl: 'images/32x32_apple_texture.png',
-            type: 'basic'
+            title: 'Filipino Hatespeech Detection',
+            message: 'Selection is saved!, Go open the extension',
+        },
+        function(notificationsId){
+            console.log("SUCCESS running: " + notificationsId);
         }
     );
 }
-
-
-
-
-
