@@ -26,7 +26,7 @@ function preprocess(){
       document.getElementById("input_text").readOnly = true;
       // !!!need to change BASE_URL everytime there is a new session
       // !!!get url from val
-      const BASE_URL = 'https://9ba3-204-145-5-43.ngrok-free.app';
+      const BASE_URL = 'https://dda0-124-106-181-212.ngrok-free.app';
       const queryParam = `/?input='${sentiment}'`;
   
       fetch(`${BASE_URL}${queryParam}`, {
