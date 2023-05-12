@@ -1,5 +1,5 @@
 {
-    "name": "Filipino Hatespeech Detectionv3 (git)",
+    "name": "Filipino Hatespeech Detectionv4 (git)",
     "description": "official filipino hatespeech detection demo",
     "version": "1.0",
     "manifest_version": 3,
@@ -13,7 +13,7 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["cloudservice.js"]
+            "js": ["functions.js"]
         }
     ],
     "permissions":[
