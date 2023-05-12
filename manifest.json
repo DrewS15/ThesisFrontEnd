@@ -3,7 +3,10 @@
     "description": "official filipino hatespeech detection demo",
     "version": "1.0",
     "manifest_version": 3,
-    "action": {"default_popup": "userInterface.html"},
+    "action": {
+        "default_popup": "userInterface.html",
+        "default_icon": "images/32x32_apple_texture.png"
+    },
     "background": {
         "service_worker": "contextmenu.js"
     },
@@ -18,6 +21,7 @@
       "tabs",
       "storage",
       "scripting",
-      "activeTab"
+      "activeTab",
+      "notifications"
     ]
 }

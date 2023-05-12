@@ -26,13 +26,12 @@
       <!--<h3 class="text">Input Text: </h3>-->
     <textarea id="input_text" rows="5" cols="35" placeholder="Insert Text Here" wrap="hard"></textarea>
     <div align="center">
-      <button type="button" form="inputForm" id="analyze" style="background-color: white">Analyze Text</button>
+      <button type="button" form="inputForm" id="analyze" style="background-color: white">Analyze</button>
     </div>
-    <h3 class="text" style="text-align: center">Sentiment Classification</h3>
-    <textarea id="decision_display" style="text-align: center" rows="5" cols="35" readonly wrap="hard"></textarea>
+    <h3 id="decision_label" class="text" >ANALYSIS RESULT</h3>
+    <textarea id="decision_display" rows="5" cols="35" readonly wrap="hard"></textarea>
     </form>
-
-    <script src="functions.js"></script>
     <script src="cloudservice.js"></script>
+    <script src="functions.js"></script>
   </body>
 </html>

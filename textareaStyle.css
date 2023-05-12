@@ -32,8 +32,19 @@
 	background-color: #2C2C2C;
 }
 
+
+#decision_label{
+	display: none;
+	font-size: 1em;
+	text-align: center;
+  }
+
 #decision_display{
     width: 250px;
     height: 1.25em;
+	font-size: 1.5em;
     resize: none;
+	font-weight: bold;
+	display: none;
+	text-align: center;
   }
