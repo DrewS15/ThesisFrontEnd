@@ -1,5 +1,4 @@
 var manifestData = chrome.runtime.getManifest();
-document.getElementById("version").innerHTML = " Version Alpha " + manifestData.version;
 document.getElementById("title").innerHTML = manifestData.name;
 
 const analyzeBtn = document.getElementById("analyze");
@@ -24,11 +23,11 @@ analyzeBtn.addEventListener("click", function() {
     if(isClick){
       console.log("Value: " + sentiment);
       console.log("Input string: " + sentiment);
-      analyzeBtn.innerHTML = "Clear";
+      analyzeBtn.innerHTML = "CLEAR";
       inputText.readOnly = true;
       // !!!need to change BASE_URL everytime there is a new session
       // !!!get url from val
-      const BASE_URL = 'https://dda0-124-106-181-212.ngrok-free.app';
+      const BASE_URL = 'https://d1aa-124-106-181-212.ngrok-free.app';
       const queryParam = `/?input='${sentiment}'`;
   
       fetch(`${BASE_URL}${queryParam}`, {
@@ -47,7 +46,7 @@ analyzeBtn.addEventListener("click", function() {
       console.log("Clear! : " + decisionDisplay.value);
       chrome.storage.local.set({ highlighted_text : null});
       inputText.readOnly = false;
-      analyzeBtn.innerHTML = "Analyze";
+      analyzeBtn.innerHTML = "ANALYZE";
       inputText.value = null;
       decisionDisplay.innerHTML = null;
       decisionDisplay.style.display = "none";

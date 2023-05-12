@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(() => {
     var contextMenuItem = {
         "id": "ExtensionDemo", 
         "title": "Filipino Hatespeech Detection3",
-        "contexts": ["selection"]
+        "contexts": ["selection"],
     }
 
     // create context menu with the information above
@@ -26,7 +26,7 @@ function notifyUser(){
     chrome.notifications.create(
         {
             type: 'basic',
-            iconUrl: 'images/32x32_apple_texture.png',
+            iconUrl: 'images/128x128_senty.png',
             title: 'Filipino Hatespeech Detection',
             message: 'Selection is saved!, Go open the extension',
         },

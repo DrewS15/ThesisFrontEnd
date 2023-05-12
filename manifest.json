@@ -1,11 +1,13 @@
 {
-    "name": "Filipino Hatespeech Detectionv4 (git)",
+    "name": "Filipino Hatespeech Detection",
     "description": "official filipino hatespeech detection demo",
     "version": "1.0",
     "manifest_version": 3,
     "action": {
-        "default_popup": "userInterface.html",
-        "default_icon": "images/32x32_apple_texture.png"
+        "default_popup": "userInterface.html"
+    },
+    "icons": {
+        "128": "images/128x128_senty.png"
     },
     "background": {
         "service_worker": "contextmenu.js"
