@@ -1,6 +1,6 @@
 {
-    "name": "Filipino Hatespeech Detection",
-    "description": "official filipino hatespeech detection demo",
+    "name": "SENT.y",
+    "description": "Simple machine learning extension to detect hints of Filipino Hatespeech, trained in the Tagalog and English language",
     "version": "1.0",
     "manifest_version": 3,
     "action": {
