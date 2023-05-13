@@ -3,8 +3,8 @@ chrome.runtime.onInstalled.addListener(() => {
     // context menu information for chrome extension
     // when user right clicks on a text, the extension be available in the options
     var contextMenuItem = {
-        "id": "ExtensionDemo", 
-        "title": "Filipino Hatespeech Detection3",
+        "id": "sentyExtension", 
+        "title": "SENT.y : Filipino Hatespeech Detection",
         "contexts": ["selection"],
     }
 
