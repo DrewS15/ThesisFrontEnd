@@ -15,24 +15,22 @@ chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.onClicked.addListener(function(info, tab){
       //store the selected text in variable selectedText
         var selectedText = info.selectionText
-          //store the selected text in local storage
+        //store the selected text in local storage
         chrome.storage.local.set({ highlighted_text : selectedText})
         // Notify user upon selection
         notifyUser();
     });
 });
 function notifyUser(){
-    console.log("Create Notification");
     chrome.notifications.create(
         'notifyUser',
         {
             type: 'basic',
             iconUrl: 'images/128x128_senty.png',
-            title: 'Filipino Hatespeech Detection',
+            title: 'SENT.y',
             message: 'Selection is saved!, Go open the extension',
         },
         function(notificationsId){
-            console.log("SUCCESS running: " + notificationsId);
             const timer = setTimeout(function(){
             chrome.notifications.clear('notifyUser');}, 5*1000);
         }

@@ -4,6 +4,7 @@
     resize: none;
     overflow: auto;
 	overflow-x: hidden;
+	border-radius: 5px;
 }
 
 #input_text::-webkit-scrollbar-track{
@@ -17,21 +18,8 @@
 
 #input_text::-webkit-scrollbar-thumb{
 	background-color: #2C2C2C;
+	border-radius: 2px;
 }
-
-#decision_display::-webkit-scrollbar-track{
-	background-color: rgb(190, 190, 190);
-}
-
-#decision_display::-webkit-scrollbar{
-	width: 4px;
-	background-color: #F5F5F5;
-}
-
-#decision_display::-webkit-scrollbar-thumb{
-	background-color: #2C2C2C;
-}
-
 
 #decision_label{
 	display: none;

@@ -2,17 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Select Text</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="textareaStyle.css">
-    
   </head>
-  
   <body>
-    <!-- 
-    <h2>Filipino Hatespeech Detection</h2>
-    <h3>INPUT TEXT</h3>
-    -->
     <div class="text grid-container">
       <div class="text grid-child">
           <span class="title">Filipino Hatespeech Detection</span><br>
@@ -22,21 +15,13 @@
         <img src="images/128x128_senty.png" alt="SENT.Y" style="width:64px;height:64px;">
       </div>
     </div>
-    
     <form id="inputForm" method="post" autocomplete="off">
-    <textarea id="input_text" rows="5" cols="35" placeholder="Insert Text Here" wrap="hard"></textarea>
-    <div align="center">
-      <button type="button" form="inputForm" id="analyze" style="background-color: white; font-family: Impact;">ANALYZE</button>
-    </div>
-
-    <h3 id="decision_label" class="text" style="font-size: 1em;" >ANALYSIS RESULT</h3>
-    <!--
-    <textarea id="decision_display" rows="5" cols="35" readonly wrap="hard"></textarea>
-    -->
-
-    <div id="decision_display" style="color: 2C2C2C">
-      
-    </div>
+      <textarea id="input_text" rows="5" cols="35" placeholder="Insert Text Here" wrap="hard"></textarea>
+      <div align="center">
+        <button type="button" form="inputForm" id="analyze" style="background-color: white; font-family: Impact;">ANALYZE</button>
+      </div>
+      <h3 id="decision_label" class="text" style="font-size: 1em;" >ANALYSIS RESULT</h3>
+      <div id="decision_display" style="color: transparent">NULL</div>
     </form>
     <script src="functions.js"></script>
   </body>
