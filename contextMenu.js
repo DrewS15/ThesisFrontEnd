@@ -24,6 +24,7 @@ chrome.runtime.onInstalled.addListener(() => {
 function notifyUser(){
     console.log("Create Notification");
     chrome.notifications.create(
+        'notifyUser',
         {
             type: 'basic',
             iconUrl: 'images/128x128_senty.png',
@@ -32,6 +33,8 @@ function notifyUser(){
         },
         function(notificationsId){
             console.log("SUCCESS running: " + notificationsId);
+            const timer = setTimeout(function(){
+            chrome.notifications.clear('notifyUser');}, 5*1000);
         }
     );
 }

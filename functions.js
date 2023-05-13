@@ -1,6 +1,3 @@
-var manifestData = chrome.runtime.getManifest();
-document.getElementById("title").innerHTML = manifestData.name;
-
 const analyzeBtn = document.getElementById("analyze");
 const inputText = document.getElementById("input_text");
 const decisionDisplay = document.getElementById("decision_display");
@@ -83,10 +80,9 @@ function postProcess(){
 }
 
 observer.observe(decisionDisplay,{
-  subtree: true,
   characterData: true,
-  childList: true,
 });
+
 
 
 
