@@ -80,7 +80,9 @@ function postProcess(){
 }
 
 observer.observe(decisionDisplay,{
+  subtree: true,
   characterData: true,
+  childList: true,
 });
 
 
