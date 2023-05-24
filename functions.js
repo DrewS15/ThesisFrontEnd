@@ -23,7 +23,7 @@ analyzeBtn.addEventListener("click", function() {
     if(isClick){
       analyzeBtn.innerHTML = "CLEAR";
       inputText.readOnly = true;
-      const BASE_URL = 'https://d0e7-124-106-183-126.ngrok-free.app';
+      const BASE_URL = 'https://d1aa-124-106-181-212.ngrok-free.app';
       const queryParam = `/?input='${sentiment}'`;
       fetch(`${BASE_URL}${queryParam}`, {
         method: 'GET',
