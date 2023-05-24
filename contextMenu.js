@@ -23,7 +23,7 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 function notifyUser(){
     chrome.notifications.create(
-        'notifyUser',
+        //'notifyUser',
         {
             type: 'basic',
             iconUrl: 'images/128x128_senty.png',
@@ -31,8 +31,8 @@ function notifyUser(){
             message: 'Selection is saved!, Go open the extension',
         },
         function(notificationsId){
-            const timer = setTimeout(function(){
-            chrome.notifications.clear('notifyUser');}, 5*1000);
+            //const timer = setTimeout(function(){
+            //chrome.notifications.clear('notifyUser');}, 5*1000);
         }
     );
 }

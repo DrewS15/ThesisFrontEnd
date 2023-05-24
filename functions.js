@@ -4,6 +4,10 @@ const decisionDisplay = document.getElementById("decision_display");
 const decisionLabel = document.getElementById("decision_label");
 var isClick = true;
 
+const observer = new MutationObserver(postProcess);
+const delay = setTimeout(postProcess,1*1000);
+const output = document.querySelector('#decision_display');
+
 chrome.storage.local.get('highlighted_text', function(result){
   selected = result.highlighted_text;
   inputText.innerHTML = selected;
@@ -19,7 +23,7 @@ analyzeBtn.addEventListener("click", function() {
     if(isClick){
       analyzeBtn.innerHTML = "CLEAR";
       inputText.readOnly = true;
-      const BASE_URL = 'https://d1aa-124-106-181-212.ngrok-free.app';
+      const BASE_URL = 'https://d0e7-124-106-183-126.ngrok-free.app';
       const queryParam = `/?input='${sentiment}'`;
       fetch(`${BASE_URL}${queryParam}`, {
         method: 'GET',
@@ -45,6 +49,13 @@ analyzeBtn.addEventListener("click", function() {
       isClick = true;
     }
   }
+
+  observer.observe(output,{
+    subtree: true,
+    characterData: true,
+    childList: true,
+  });
+  
 });
 }
 
@@ -62,11 +73,3 @@ function postProcess(){
   }
 }
 
-const observer = new MutationObserver(postProcess);
-const delay = setTimeout(postProcess,1*1000);
-
-observer.observe(decisionDisplay,{
-  subtree: true,
-  characterData: true,
-  childList: true,
-});
